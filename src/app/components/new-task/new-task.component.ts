@@ -18,8 +18,11 @@ export class NewTaskComponent implements OnInit {
     this.router.navigate(['/']);
   }
   save(_name:string){
-    let nextId = this.taskService.getNextId();
-    this.taskService.addTask(new Task(nextId,_name,false));
-    this.router.navigate(['/']);
+    // let nextId = this.taskService.getNextId();
+    this.taskService.addTask(_name).subscribe((_datos)=>{
+      console.log('Post');
+      this.router.navigate(['/']);
+    });
+    
   }
 }
