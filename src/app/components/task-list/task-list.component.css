@@ -1,0 +1,9 @@
+.strike{
+    text-decoration: line-through;
+}
+.no-style{
+    list-style: none;
+}
+li{
+    margin: 5px;
+}

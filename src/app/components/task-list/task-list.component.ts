@@ -18,4 +18,7 @@ export class TaskListComponent implements OnInit {
   addNewTask(){
     this.router.navigate(['/newtask']);
   }
+  checkTask(_id:number){
+    this.taskService.toggleStateTask(_id);
+  }
 }

@@ -18,7 +18,8 @@ export class NewTaskComponent implements OnInit {
     this.router.navigate(['/']);
   }
   save(_name:string){
-    this.taskService.addTask(new Task(_name,false));
+    let nextId = this.taskService.getNextId();
+    this.taskService.addTask(new Task(nextId,_name,false));
     this.router.navigate(['/']);
   }
 }
